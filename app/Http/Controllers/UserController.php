@@ -26,8 +26,9 @@ class UserController extends Controller
 
     public function data()
     {
-        $user = User::isNotAdmin()->orderBy('id', 'desc')->get();
-
+        // $user = User::isNotAdmin()->orderBy('id', 'desc')->get();
+        $user = User::orderBy('id', 'desc')->get();
+        // dd($user);
         return datatables()
             ->of($user)
             ->addIndexColumn()
