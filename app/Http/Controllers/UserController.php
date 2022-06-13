@@ -8,27 +8,15 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('user.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function data()
     {
-        // $user = User::isNotAdmin()->orderBy('id', 'desc')->get();
-        $user = User::orderBy('id', 'desc')->get();
-        // dd($user);
+        $user = User::isNotAdmin()->orderBy('id', 'desc')->get();
+
         return datatables()
             ->of($user)
             ->addIndexColumn()
@@ -44,6 +32,11 @@ class UserController extends Controller
             ->make(true);
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
