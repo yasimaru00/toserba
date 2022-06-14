@@ -1,11 +1,10 @@
 @extends('layouts.master')
 
-<!-- judul url setelah /-->
+<!-- judul Page-->
 @section('title')
     Dashboard
 @endsection
 
-<!-- Judul page-->
 @section('breadcrumb')
     @parent
     <li class="active">Dashboard</li>
