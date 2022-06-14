@@ -1,3 +1,4 @@
+<!-- Cetak Kartu Member -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +71,7 @@
 <body>
     <section style="border: 1px solid #fff">
         <table width="100%">
+            <!-- data member -->
             @foreach ($datamember as $key => $data)
                 <tr>
                     @foreach ($data as $item)
@@ -83,6 +85,7 @@
                                 <div class="nama">{{ $item->nama }}</div>
                                 <div class="telepon">{{ $item->telepon }}</div>
                                 <div class="barcode text-left">
+                                    <!-- barcode -->
                                     <img src="data:image/png;base64, {{ DNS2D::getBarcodePNG("$item->kode_member", 'QRCODE') }}" alt="qrcode"
                                         height="45"
                                         widht="45">
