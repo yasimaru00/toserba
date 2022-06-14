@@ -1,11 +1,10 @@
 @extends('layouts.master')
 
-<!-- Judul url-->
+<!-- Judul Page-->
 @section('title')
     Daftar Kategori
 @endsection
 
-<!-- Judul page-->
 @section('breadcrumb')
     @parent
     <li class="active">Daftar Kategori</li>
