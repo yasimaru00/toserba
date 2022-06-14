@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
+<!-- judul url setelah /-->
 @section('title')
     Dashboard
 @endsection
 
+<!-- Judul page-->
 @section('breadcrumb')
     @parent
     <li class="active">Dashboard</li>
@@ -11,6 +13,7 @@
 
 @section('content')
 <!-- Small boxes (Stat box) -->
+<!-- Ucapan untuk kasir + button untuk transaksi baru -->
 <div class="row">
     <div class="col-lg-12">
         <div class="box">
