@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
+{{-- Judul pada url setelah / --}}
 @section('title')
     Dashboard
 @endsection
 
+<!-- Judul page-->
 @section('breadcrumb')
     @parent
     <li class="active">Dashboard</li>
@@ -11,6 +13,7 @@
 
 @section('content')
 <!-- Small boxes (Stat box) -->
+<!-- Rekap jumlah data pada db master -->
 <div class="row">
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
@@ -75,6 +78,7 @@
 </div>
 <!-- /.row -->
 <!-- Main row -->
+<!-- Grafik besarnya pendapatan dalam bulan ini -->
 <div class="row">
     <div class="col-lg-12">
         <div class="box">
