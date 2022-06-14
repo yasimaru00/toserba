@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<!-- Judul Page -->
 @section('title')
     Daftar Pengeluaran
 @endsection
@@ -14,9 +15,11 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-header with-border">
+                <!-- button tambah pengeluaran -->
                 <button onclick="addForm('{{ route('pengeluaran.store') }}')" class="btn btn-success btn-xs btn-flat"><i class="fa fa-plus-circle"></i> Tambah</button>
             </div>
             <div class="box-body table-responsive">
+                <!-- tabel isi data pengeluaran -->
                 <table class="table table-stiped table-bordered">
                     <thead>
                         <th width="5%">No</th>
