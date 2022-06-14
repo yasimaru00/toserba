@@ -1,3 +1,4 @@
+<!-- detail pembelian pada transaksi -->
 <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-detail">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -7,6 +8,7 @@
                 <h4 class="modal-title">Detail Pembelian</h4>
             </div>
             <div class="modal-body">
+                <!-- tabel produk yang dibeli -->
                 <table class="table table-striped table-bordered table-detail">
                     <thead>
                         <th width="5%">No</th>
