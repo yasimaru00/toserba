@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-{{-- Judul pada url setelah / --}}
+{{-- Judul page --}}
 @section('title')
     Dashboard
 @endsection
