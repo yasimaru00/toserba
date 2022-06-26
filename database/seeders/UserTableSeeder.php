@@ -23,15 +23,15 @@ class UserTableSeeder extends Seeder
                 'level' => 1
             ],
             [
-                'name' => 'Kasir 1',
-                'email' => 'kasir1@gmail.com',
+                'name' => 'Galiley Singgang M.Y',
+                'email' => 'galiley@gmail.com',
                 'password' => bcrypt('password'),
                 'foto' => '/img/user.jpg',
                 'level' => 2
             ],
             [
-                'name' => 'Kasir 2',
-                'email' => 'kasir2@gmail.com',
+                'name' => 'Muh. Irfan Ali',
+                'email' => 'irfan@gmail.com',
                 'password' => bcrypt('password'),
                 'foto' => '/img/user.jpg',
                 'level' => 2

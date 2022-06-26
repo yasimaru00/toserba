@@ -4,18 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pengeluaran;
+use App\Models\Supplier;
 
 class PengeluaranController extends Controller
 {
     public function index()
     {
-        return view('pengeluaran.index');
+        // $supplier = Supplier::orderBy('nama')->get();
+        $supplier = Supplier::all()->pluck('nama', 'id_supplier');
+        return view('pengeluaran.index', compact('supplier'));
     }
 
     public function data()
     {
-        $pengeluaran = Pengeluaran::orderBy('id_pengeluaran', 'desc')->get();
-
+        // $pengeluaran = Pengeluaran::orderBy('id_pengeluaran', 'desc')->get();
+        $pengeluaran = Pengeluaran::leftJoin('supplier', 'supplier.id_supplier', 'pengeluaran.id_supplier')
+        ->select('pengeluaran.*', 'nama')
+        // ->orderBy('kode_produk', 'asc')
+        ->get();
+        // dd($pengeluaran);
         return datatables()
             ->of($pengeluaran)
             ->addIndexColumn()
@@ -25,6 +32,9 @@ class PengeluaranController extends Controller
             ->addColumn('nominal', function ($pengeluaran) {
                 return format_uang($pengeluaran->nominal);
             })
+            // ->addColumn('supplier', function ($pengeluaran) {
+            //     return $pengeluaran->supplier->nama;
+            // })
             ->addColumn('aksi', function ($pengeluaran) {
                 return '
                 <div class="btn-group">

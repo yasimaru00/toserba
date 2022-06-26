@@ -23,6 +23,7 @@
                         <th>Tanggal</th>
                         <th>Deskripsi</th>
                         <th>Nominal</th>
+                        <th>Supplier</th>
                         <th width="15%"><i class="fa fa-cog"></i></th>
                     </thead>
                 </table>
@@ -52,6 +53,7 @@
                 {data: 'created_at'},
                 {data: 'deskripsi'},
                 {data: 'nominal'},
+                {data: 'nama'},
                 {data: 'aksi', searchable: false, sortable: false},
             ]
         });
@@ -94,6 +96,7 @@
             .done((response) => {
                 $('#modal-form [name=deskripsi]').val(response.deskripsi);
                 $('#modal-form [name=nominal]').val(response.nominal);
+                $('#modal-form [name=id_supplier]').val(response.id_supplier);
             })
             .fail((errors) => {
                 alert('Tidak dapat menampilkan data');
