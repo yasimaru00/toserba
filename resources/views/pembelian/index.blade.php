@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<!-- Judul page -->
 @section('title')
     Daftar Pembelian
 @endsection
@@ -14,12 +15,15 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-header with-border">
+                <!-- button transaksi baru -->
                 <button onclick="addForm()" class="btn btn-success btn-xs btn-flat"><i class="fa fa-plus-circle"></i> Transaksi Baru</button>
                 @empty(! session('id_pembelian'))
+                <!-- button transaksi yang masih aktif -->
                 <a href="{{ route('pembelian_detail.index') }}" class="btn btn-info btn-xs btn-flat"><i class="fa fa-pencil"></i> Transaksi Aktif</a>
                 @endempty
             </div>
             <div class="box-body table-responsive">
+                <!-- tabel isi detail pembelian -->
                 <table class="table table-stiped table-bordered table-pembelian">
                     <thead>
                         <th width="5%">No</th>
@@ -81,18 +85,18 @@
             ]
         })
     });
-
+    //fungsi add/penambahan
     function addForm() {
         $('#modal-supplier').modal('show');
     }
-
+    // fungsi lihat detail
     function showDetail(url) {
         $('#modal-detail').modal('show');
 
         table1.ajax.url(url);
         table1.ajax.reload();
     }
-
+    //fungsi menghapus data
     function deleteData(url) {
         if (confirm('Yakin ingin menghapus data terpilih?')) {
             $.post(url, {
