@@ -17,6 +17,7 @@ class BuatPengeluaranTable extends Migration
             $table->increments('id_pengeluaran');
             $table->text('deskripsi');
             $table->integer('nominal');
+            $table->unsignedInteger('id_supplier');
             $table->timestamps();
         });
     }

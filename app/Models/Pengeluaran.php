@@ -12,4 +12,9 @@ class Pengeluaran extends Model
     protected $table = 'pengeluaran';
     protected $primaryKey = 'id_pengeluaran';
     protected $guarded = [];
+
+    // public function supplier()
+    // {
+    //     return $this->belongsTo(Supplier::class, 'id_supplier', 'id_supplier');
+    // }
 }

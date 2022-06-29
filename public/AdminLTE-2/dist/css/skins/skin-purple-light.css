@@ -43,7 +43,8 @@
   }
 }
 .skin-purple-light .main-header .logo {
-  background-color: #605ca8;
+  /* background-color: #605ca8; */
+  background-color: #0d00ff;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
