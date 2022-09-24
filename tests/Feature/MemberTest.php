@@ -21,8 +21,6 @@ class MemberTest extends TestCase
 
     public function test_member_page()
     {
-
-         // bikin akun 
          $response = $this->get('/member');
 
         $response->assertStatus(302);
