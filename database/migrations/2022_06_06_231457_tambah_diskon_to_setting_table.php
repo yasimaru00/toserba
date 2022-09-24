@@ -15,9 +15,12 @@ class TambahDiskonToSettingTable extends Migration
     {
         Schema::table('setting', function (Blueprint $table) {
             $table->smallInteger('diskon')
-                  ->default(0)
-                  ->after('tipe_nota');
+                ->default(0)
+                ->after('tipe_nota');
         });
+        // Artisan::call('db:seed', [
+        //     '--class' => 'SettingTableSeeder',
+        // ]);
     }
 
     /**

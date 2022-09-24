@@ -83,11 +83,16 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route("setting.index") }}">
+                <a href="{{ route('setting.index') }}">
                     <i class="fa fa-cogs"></i> <span>Pengaturan</span>
                 </a>
             </li>
             @else
+            <li>
+                <a href="{{ route('member.index') }}">
+                    <i class="fa fa-id-card"></i> <span>Member</span>
+                </a>
+            </li>
             <li>
                 <a href="{{ route('transaksi.index') }}">
                     <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Aktif</span>

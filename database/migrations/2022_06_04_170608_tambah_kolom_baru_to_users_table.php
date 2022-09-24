@@ -17,6 +17,10 @@ class TambahKolomBaruToUsersTable extends Migration
             $table->string('foto')->nullable()->after('password');
             $table->tinyInteger('level')->default(0)->after('foto');
         });
+
+        // Artisan::call('db:seed', [
+        //     '--class' => 'UserTableSeeder',
+        // ]);
     }
 
     /**

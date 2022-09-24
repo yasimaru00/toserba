@@ -21,8 +21,8 @@ class SettingTableSeeder extends Seeder
             'telepon' => '081234777789',
             'tipe_nota' => 1, // kecil
             'diskon' => 3,
-            'path_logo' => '/img/logo.png',
-            'path_kartu_member' => '/img/member.png',
+            'path_logo' => url('/img/logo.png'),
+            'path_kartu_member' => url('/img/member.png'),
         ]);
     }
 }

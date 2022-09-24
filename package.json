@@ -1,33 +1,61 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "@inertiajs/inertia": "^0.11.0",
-        "@inertiajs/inertia-vue3": "^0.6.0",
-        "@inertiajs/progress": "^0.2.7",
-        "@popperjs/core": "^2.10.2",
-        "@tailwindcss/forms": "^0.5.0",
-        "@tailwindcss/typography": "^0.5.0",
-        "@vue/compiler-sfc": "^3.2.31",
-        "alpinejs": "^3.0.6",
-        "axios": "^0.21",
-        "bootstrap": "^5.1.3",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "resolve-url-loader": "^5.0.0",
-        "sass": "^1.32.11",
-        "sass-loader": "^11.0.1",
-        "tailwindcss": "^3.0.0",
-        "vue": "^3.2.31",
-        "vue-loader": "^17.0.0"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "cypress:open": "cypress open",
+    "build": "webpack --config prod.config.js",
+    "start": "webpack-dev-server -d --config webpack.dev.config.js --content-base public/ --progress --colors"
+  },
+  "devDependencies": {
+    "@inertiajs/inertia": "^0.11.0",
+    "@inertiajs/inertia-vue3": "^0.6.0",
+    "@inertiajs/progress": "^0.2.7",
+    "@popperjs/core": "^2.10.2",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "@vue/compiler-sfc": "^3.2.31",
+    "alpinejs": "^3.0.6",
+    "axios": "^0.21",
+    "bootstrap": "^5.1.3",
+    "cypress": "^10.8.0",
+    "laravel-mix": "^6.0.6",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "tailwindcss": "^3.0.0",
+    "vue": "^3.2.31",
+    "vue-loader": "^17.0.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "name": "toserba",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasimaru00/toserba.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasimaru00/toserba/issues"
+  },
+  "homepage": "https://github.com/yasimaru00/toserba#readme",
+  "keywords": [
+    "Cypress",
+    "project",
+    "for",
+    "beginner"
+  ]
 }
