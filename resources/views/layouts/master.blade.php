@@ -1,3 +1,4 @@
+<!-- Layout master untuk semua halaman -->
 <!DOCTYPE html>
 <html>
 <head>

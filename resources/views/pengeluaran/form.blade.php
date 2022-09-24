@@ -1,3 +1,4 @@
+<!-- Form tambah pengeluaran -->
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form">
     <div class="modal-dialog modal-lg" role="document">
         <form action="" method="post" class="form-horizontal">
@@ -11,6 +12,7 @@
                     <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
+                    <!-- penambahan deskripsi -->
                     <div class="form-group row">
                         <label for="deskripsi" class="col-lg-2 col-lg-offset-1 control-label">Deskripsi</label>
                         <div class="col-lg-6">
@@ -18,10 +20,23 @@
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>
+                    <!-- penambahan nominal -->
                     <div class="form-group row">
                         <label for="nominal" class="col-lg-2 col-lg-offset-1 control-label">Nominal</label>
                         <div class="col-lg-6">
                             <input type="number" name="nominal" id="nominal" class="form-control" required>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="id_supplier" class="col-lg-2 col-lg-offset-1 control-label">Supplier</label>
+                        <div class="col-lg-6">
+                            <select name="id_supplier" id="id_supplier" class="form-control" required>
+                                <option value="">Pilih Supplier</option>
+                                @foreach ($supplier as $key => $item)
+                                <option value="{{ $key }}">{{ $item }}</option>
+                                @endforeach
+                            </select>
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>

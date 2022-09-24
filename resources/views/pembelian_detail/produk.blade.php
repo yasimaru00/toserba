@@ -1,3 +1,4 @@
+<!-- Form pilih produk yang dibeli -->
 <div class="modal fade" id="modal-produk" tabindex="-1" role="dialog" aria-labelledby="modal-produk">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -7,6 +8,7 @@
                 <h4 class="modal-title">Pilih Produk</h4>
             </div>
             <div class="modal-body">
+                <!-- tabel isi detail produk -->
                 <table class="table table-striped table-bordered table-produk">
                     <thead>
                         <th width="5%">No</th>

@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
+<!-- Judul page -->
 @section('title')
     Laporan Pendapatan {{ tanggal_indonesia($tanggalAwal, false) }} s/d {{ tanggal_indonesia($tanggalAkhir, false) }}
 @endsection
 
+<!-- ambil css  -->
 @push('css')
 <link rel="stylesheet" href="{{ asset('/AdminLTE-2/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
 @endpush
@@ -18,10 +20,13 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-header with-border">
+                <!-- button ubah periode -->
                 <button onclick="updatePeriode()" class="btn btn-info btn-xs btn-flat"><i class="fa fa-plus-circle"></i> Ubah Periode</button>
+                <!-- button cetak laporan -->
                 <a href="{{ route('laporan.export_pdf', [$tanggalAwal, $tanggalAkhir]) }}" target="_blank" class="btn btn-success btn-xs btn-flat"><i class="fa fa-file-excel-o"></i> Export PDF</a>
             </div>
             <div class="box-body table-responsive">
+                <!-- tabel isi laporan bulan ini -->
                 <table class="table table-stiped table-bordered">
                     <thead>
                         <th width="5%">No</th>

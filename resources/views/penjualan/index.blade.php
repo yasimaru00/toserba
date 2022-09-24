@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<!-- Judul Page -->
 @section('title')
     Daftar Penjualan
 @endsection
@@ -14,6 +15,7 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-body table-responsive">
+                <!-- Tabel isi daftar penjualan -->
                 <table class="table table-stiped table-bordered table-penjualan">
                     <thead>
                         <th width="5%">No</th>
@@ -75,14 +77,14 @@
             ]
         })
     });
-
+    // fungsi lihat detail
     function showDetail(url) {
         $('#modal-detail').modal('show');
 
         table1.ajax.url(url);
         table1.ajax.reload();
     }
-
+    // fungsi delete data penjualan
     function deleteData(url) {
         if (confirm('Yakin ingin menghapus data terpilih?')) {
             $.post(url, {

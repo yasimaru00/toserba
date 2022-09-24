@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Judul url -->
     <title>Laporan Pendapatan</title>
 
     <link rel="stylesheet" href="{{ asset('/AdminLTE-2/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 </head>
 <body>
+    <!-- Isi laporan yang dicetak -->
     <h3 class="text-center">Laporan Pendapatan</h3>
     <h4 class="text-center">
         Tanggal {{ tanggal_indonesia($awal, false) }}

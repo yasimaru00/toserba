@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<!-- Judul Page -->
 @section('title')
     Transaksi Pembelian
 @endsection
@@ -41,6 +42,7 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-header with-border">
+                <!-- tabel isi pilih supplier -->
                 <table>
                     <tr>
                         <td>Supplier</td>
@@ -60,6 +62,7 @@
                     
                 <form class="form-produk">
                     @csrf
+                    <!-- Pilih produk yang dibeli -->
                     <div class="form-group row">
                         <label for="kode_produk" class="col-lg-2">Kode Produk</label>
                         <div class="col-lg-5">
@@ -74,7 +77,7 @@
                         </div>
                     </div>
                 </form>
-
+                <!-- tabel isi dari pembelian -->
                 <table class="table table-stiped table-bordered table-pembelian">
                     <thead>
                         <th width="5%">No</th>

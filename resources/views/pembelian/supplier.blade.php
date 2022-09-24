@@ -1,3 +1,4 @@
+<!-- Form pilih supplier yang akan dilakukan pembelian -->
 <div class="modal fade" id="modal-supplier" tabindex="-1" role="dialog" aria-labelledby="modal-supplier">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
