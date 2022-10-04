@@ -2,12 +2,12 @@
 
 <!-- Judul Page-->
 @section('title')
-    Daftar Kategori
+Daftar Kategori
 @endsection
 
 @section('breadcrumb')
-    @parent
-    <li class="active">Daftar Kategori</li>
+@parent
+<li class="active">Daftar Kategori</li>
 @endsection
 
 @section('content')
@@ -39,7 +39,7 @@
 <script>
     let table;
     // Sorting isi tabel
-    $(function () {
+    $(function() {
         table = $('.table').DataTable({
             responsive: true,
             processing: true,
@@ -48,15 +48,24 @@
             ajax: {
                 url: '{{ route('kategori.data') }}',
             },
-            columns: [
-                {data: 'DT_RowIndex', searchable: false, sortable: false},
-                {data: 'nama_kategori'},
-                {data: 'aksi', searchable: false, sortable: false},
+            columns: [{
+                    data: 'DT_RowIndex',
+                    searchable: false,
+                    sortable: false
+                },
+                {
+                    data: 'nama_kategori'
+                },
+                {
+                    data: 'aksi',
+                    searchable: false,
+                    sortable: false
+                },
             ]
         });
-        
-        $('#modal-form').validator().on('submit', function (e) {
-            if (! e.preventDefault()) {
+
+        $('#modal-form').validator().on('submit', function(e) {
+            if (!e.preventDefault()) {
                 $.post($('#modal-form form').attr('action'), $('#modal-form form').serialize())
                     .done((response) => {
                         $('#modal-form').modal('hide');
