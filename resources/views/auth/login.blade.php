@@ -43,7 +43,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat" data-test="btn-login">Signin</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat" data-test="btn-login">Sign In</button>
                 </div>
                 <!-- /.col -->
             </div>
